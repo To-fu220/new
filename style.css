@@ -1,36 +1,102 @@
 @charset "UTF-8";
-/*m(^ω^)m*/
+/* m(^ω^)m */
 body{
+    margin: 0;
     color: cadetblue;
     background: black;
 }
 
-/*ヘッダー*/
+/* ヘッダー */
 #wrap-header{
     height: 56px;
-    width: 100%;
+    width: auto;
     inset: 0;
-    background: rgba(133, 115, 250, 0.63);
+    padding: 0 5%;
+    background: whitesmoke;
+    opacity: 30%;
     position: fixed;
+    display: flex;
+    justify-content: space-between;
     z-index: 50;
+    transition: all 0.35s;
+    transition-delay: 0.2s;
 }
+#wrap-header:hover{
+    opacity: 90%;
+    transition: all 0.5s ease;
+    transition-delay: 0.05s;
+}
+/* DSSロゴ */
 #logo{
-    position: absolute;
-    padding: 5px;
-    left: 10%;
-    top: 15px;
+    width: auto;
+    height: 56px;
+    position: relative;
+    left: 3%;
 }
+/* メニュー */
 .nav_list{
-    position: absolute;
-    right: 10%;
+    position: relative;
     display: flex;
     list-style-type: none;
-    padding: 0 30px 0 0 ;
+}
+.nav_item{
+    position: relative;
+    text-align: center;
+    margin-left: 40px;
+}
+.nav_item::first-letter{
+    color: orangered;
 }
 .nav_item a{
-    margin-left: 30px;
     color: coral;
     text-decoration: none;
+    font-size: large;
+    letter-spacing: 0.25em;
+}
+.nav_item::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 0px;
+    height: 20%;
+    background: gray;
+    border-radius: 12.5%;
+    top: 70%;
+    z-index: -1;
+}
+.nav_item:hover::before{
+    animation: 2s ease-in-out 0s infinite normal forwards running nav_item_befor_hover;
+}
+@keyframes nav_item_befor_hover{
+    0%{
+        width: 0%;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0%;
+        left: 100%;
+    }
+}
+
+/* アクセスメニュー */
+#wrap-access{
+    position: relative;
+    list-style-type: none;
+    margin: auto 0;
+    height: 65%;
+}
+#wrap-access li{
+    position: relative;
+    display: inline;
+}
+#wrap-access li img{
+    position: relative;
+    height: 100%;
+    vertical-align: bottom;
 }
 
 /*メイン*/
