@@ -2,7 +2,7 @@
 var Menu_order = ['Top','About','News','Member','Contact'];
 
 $(function(){
-    $('#header').load('../header.html', function(){header_rewrite();});//ヘッダーの配置
+    $('#header').load('./header.html', function(){header_rewrite();});//ヘッダーの配置
 
     function header_rewrite (){
         if($('#header').attr('name') == 'otherheader'){
