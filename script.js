@@ -2,7 +2,7 @@
 var Menu_order = ['Top','About','News','Member','Contact'];
 
 $(function(){
-    $('#header').load('parts/header.html', header_rewrite());//ヘッダーの配置
+    $('#header').load('parts/header.html', function(){header_rewrite();});//ヘッダーの配置
 
     function header_rewrite (){
         if($('#header').attr('name') == 'otherheader'){
@@ -13,4 +13,6 @@ $(function(){
         }
     }
 });
-
+$(window).on('load', function() {
+    //全画面ロード後実行
+});
