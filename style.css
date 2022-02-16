@@ -3,7 +3,7 @@
 /* m(^ω^)m */
 body{
     margin: 0;
-    color: cadetblue;
+    color: rgb(53, 181, 151);
     background: rgb(58, 57, 58);
     font-family: 'Righteous', cursive;
 }
@@ -14,7 +14,7 @@ body{
     width: auto;
     inset: 0;
     padding: 0 8%;
-    background: whitesmoke;
+    background: rgb(175, 179, 181);
     opacity: 85%;
     position: fixed;
     display: flex;
@@ -113,12 +113,15 @@ body{
 
 /*メイン*/
 #wrap-content{
-    margin-top: 0px;
+    margin-top: 5%;
 }
 #pagetitle{
-    margin: 10px 100px;
+    margin: 5% 0 5% 5%;
     font-size: 70px;
-    color: cornflowerblue;
+    color: rgb(53, 181, 151);
+}
+#signbord{
+    height: 100%;
 }
 /*About*/
 #about{
