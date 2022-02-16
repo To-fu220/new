@@ -15,7 +15,6 @@ body{
     inset: 0;
     padding: 0 8%;
     background: rgb(175, 179, 181);
-    opacity: 85%;
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -121,7 +120,7 @@ body{
     color: rgb(53, 181, 151);
 }
 #signbord{
-    height: 100%;
+    padding-top: 100%;
 }
 /*About*/
 #about{
