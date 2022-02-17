@@ -157,10 +157,14 @@ body{
 
 /* 問い合わせ */
 #wrap-contact{
-    margin: 5vh;
+    margin: 5vh 20vh;
+}
+#wrap-contact p{
+    padding-bottom: 3vh;
+    border-bottom:rgb(175, 179, 181) dotted 5px;
 }
 #wrap-contact form{
-    margin-top: 3vh;
+    margin-top: 5vh;
 }
 .form-group{
     margin-left: 3vh;
