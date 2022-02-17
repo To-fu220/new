@@ -154,13 +154,63 @@ body{
 }
 
 /* 問い合わせ */
+#wrap-contact{
+    margin: 5vh;
+}
+#wrap-contact form{
+    margin-top: 3vh;
+}
 .form-group{
+    margin-left: 3vh;
     margin-bottom: 1em;
     display: flex;
 }
 .form-group label{
-    font-size: large;
+    margin: auto 0;
+    font-size: 1.2em;
     flex: 0 0 10em;
+}
+.form-group input,select,textarea{
+    border-radius: 0.5em;
+    font-size: 1em;
+    width: 100%;
+}
+.form-group select{
+    cursor: pointer;
+    height: 3em;
+    padding: 0 3em 0 1em;
+    max-width: 24em;
+    appearance: none;
+    -webkit-appearance: none;
+}
+.form-group select::-ms-expand{
+    display: none;
+}
+.selector{
+    position: relative;
+}
+.selector::after{
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: calc(50% - 1em);
+    right: 1em;
+    height: 1em;
+    width: 1em;
+    transform: rotate(45deg);
+    background: #00000000;
+    box-shadow: 0.2em 0.2em rgb(175, 179, 181);
+}
+
+.form-group input{
+    height: 2em;
+    padding: 0.5em 1em;
+    max-width: 20em;
+}
+.form-group textarea{
+    padding: 1em;
+    max-width: 40em;
+    font-family: 'Righteous', cursive;
 }
 
 /*フッター*/
