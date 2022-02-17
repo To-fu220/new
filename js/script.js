@@ -15,4 +15,6 @@ $(function(){
 });
 $(window).on('load', function() {
     //全画面ロード後実行
+
+    $('#loading').delay(800).fadeOut(500);
 });

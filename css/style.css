@@ -1,16 +1,31 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 /* m(^ω^)m */
+#loading{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(58, 57, 58);
+    position: fixed;
+    display: flex;
+    inset: 0;
+    z-index: 999;
+}
+#loading div{
+    inset: 0;
+    text-align: center;
+    margin: auto;
+}
+
 body{
     margin: 0;
-    color: rgb(53, 181, 151);
+    color: rgb(175, 179, 181);
     background: rgb(58, 57, 58);
     font-family: 'Righteous', cursive;
 }
 
 /* ヘッダー */
 #wrap-header{
-    height: 5%;
+    height: 5vh;
     width: auto;
     inset: 0;
     padding: 0 8%;
@@ -112,12 +127,12 @@ body{
 
 /*メイン*/
 #wrap-content{
-    margin-top: 5%;
+    margin-top: 5vh;
 }
 #pagetitle{
-    margin: 5% 0 5% 5%;
+    margin: 5vh;
     font-size: 70px;
-    color: rgb(53, 181, 151);
+    max-width: 80%;
 }
 #signbord{
     padding-top: 10%;
@@ -125,27 +140,40 @@ body{
 /*About*/
 #about{
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 80%;
 }
 /*ミニNews*/
 #mininews{
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 80%;
 }
 /*Member*/
 #member{
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 80%;
+}
+
+/* 問い合わせ */
+.form-group{
+    margin-bottom: 1em;
+    display: flex;
+}
+.form-group label{
+    font-size: large;
+    flex: 0 0 10em;
+}
+.form-group input,select{
 }
 
 /*フッター*/
 #footer{
     text-align: center;
-    padding-top: 5%;
+    padding-top: 5vh;
     padding-bottom: 40px;
     background: rgb(175, 179, 181);
 }
 .copyright{
+    color: rgb(58, 57, 58);
     font-size: small;
     font-family: 'Righteous', cursive;
 }
