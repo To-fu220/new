@@ -13,6 +13,17 @@ $(function(){
     }
     $(".selector").change(function () {
         $(this).removeClass('unselected');
+        //綾瀬はるか様強制入力
+        if ($(this).find('select').val() == '綾瀬はるか様からのお問い合わせ') {
+            console.log($(this).find('select').val());
+            $('input[name=name]').val('綾瀬はるか');
+            $('input[name=name]').prop('disabled', true);
+        }else{
+            $('input[name=name]').val('');
+            $('input[name=name]').prop('disabled', false);
+        }
+        //不適切動画 oh no!
+
     });
 });
 $(window).on('load', function() {
