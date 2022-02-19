@@ -1,11 +1,20 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+:root{
+    --color1: #f0f0e4;
+    --color2: #4d4a49;
+    --color3: #dfdcdb;
+    --font: 'DotGothic16', sans-serif;
+}
+
 /* m(^ω^)m */
 #loading{
     width: 100vw;
     height: 100vh;
-    background: rgb(58, 57, 58);
+    background: var(--color1);
+    font-size: xx-large;
     position: fixed;
     display: flex;
     inset: 0;
@@ -19,19 +28,19 @@
 
 body{
     margin: 0;
-    color: rgb(175, 179, 181);
-    background: rgb(58, 57, 58);
+    color: var(--color2);
+    background: var(--color1);
     font-family: 'Righteous', cursive;
-    font-family: 'Hachi Maru Pop', cursive;
+    font-family: var(--font);
 }
 
 /* ヘッダー */
 #wrap-header{
-    height: 5vh;
+    height: 3em;
     width: auto;
     inset: 0;
     padding: 0 8%;
-    background: rgb(175, 179, 181);
+    background: var(--color2);
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -50,11 +59,14 @@ body{
 .nav_list{
     position: relative;
     display: flex;
+    height: 100%;
+    margin: 0;
     list-style-type: none;
     justify-content: space-between;
     padding: 0;
 }
 .nav_item{
+    display: flex;
     position: relative;
     text-align: left;
     font-size: 100%;
@@ -63,27 +75,27 @@ body{
 .nav_item:nth-child(1){
     margin-left: 0;
 }
-.nav_item::first-letter{
-    color: orangered;
+.nav_item a::first-letter{
+    color: rgb(229, 0, 104);
 }
 .nav_item a{
-    color: coral;
+    margin: auto;
+    color: var(--color3);
     text-decoration: none;
     font-size: large;
     letter-spacing: 0.25em;
 }
-.nav_item::before{
+.nav_item a::before{
     content: "";
     position: absolute;
     display: inline-block;
     width: 0px;
-    height: 20%;
+    height: 10%;
     background: gray;
-    border-radius: 12.5%;
-    top: 70%;
+    top: 75%;
     z-index: -1;
 }
-.nav_item:hover::before{
+.nav_item a:hover::before{
     animation: 2s ease-in-out 0s infinite normal forwards running nav_item_befor_hover;
 }
 @keyframes nav_item_befor_hover{
@@ -129,10 +141,11 @@ body{
 
 /*メイン*/
 #wrap-content{
-    margin-top: 5vh;
+    margin-top: 5%;
 }
 #pagetitle{
-    margin: 5vh;
+    margin: 5%;
+    margin-bottom: 1%;
     font-size: 70px;
     max-width: 80%;
 }
@@ -157,17 +170,18 @@ body{
 
 /* 問い合わせ */
 #wrap-contact{
-    margin: 5vh 20vh;
+    margin: 5% 10%;
+    margin-top: 1%;
 }
 #wrap-contact p{
-    padding-bottom: 3vh;
-    border-bottom:rgb(175, 179, 181) dotted 5px;
+    padding-bottom: 3%;
+    border-bottom:var(--color2) dotted 5px;
 }
 #wrap-contact form{
-    margin-top: 5vh;
+    margin-top: 5%;
 }
 .form-group{
-    margin-left: 3vh;
+    margin-left: 3%;
     margin-bottom: 1em;
     display: flex;
 }
@@ -181,11 +195,13 @@ body{
     font-size: 1em;
     width: 100%;
 }
+.form-group input,select,textarea:focus{
+    outline-color: var(--color2);
+}
 .form-group select{
     cursor: pointer;
     height: 3em;
     padding: 0 3em 0 1em;
-    max-width: 24em;
     appearance: none;
     -webkit-appearance: none;
 }
@@ -216,38 +232,36 @@ body{
     width: 1em;
     transform: rotate(45deg);
     background: #00000000;
-    box-shadow: 0.2em 0.2em rgb(175, 179, 181);
+    box-shadow: 0.2em 0.2em var(--color2);
 }
 
 .form-group input{
     height: 2em;
+    border: solid #757575 1px;
     padding: 0.5em 1em;
-    max-width: 20em;
 }
 .form-group textarea{
     padding: 1em;
-    max-width: 40em;
     font-family: 'Righteous', cursive;
 }
 .check_button{
     font-size: 1.3em;
-    font-family: 'Hachi Maru Pop', cursive;
-    color: rgb(58, 57, 58);
+    font-family: var(--font);
+    color: var(--color1);
     padding: 1em 2em;
     border-width: 5px;
     border-radius: 1em;
-    background: rgb(185, 185, 185);
+    background: var(--color2);
 }
 
 /*フッター*/
 #footer{
     text-align: center;
-    padding-top: 5vh;
-    padding-bottom: 40px;
-    background: rgb(175, 179, 181);
+    padding: 3% 0;
+    background: var(--color2);
 }
 .copyright{
-    color: rgb(58, 57, 58);
+    color: var(--color1);
     font-size: small;
     font-family: 'Righteous', cursive;
 }
