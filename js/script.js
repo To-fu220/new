@@ -3,7 +3,7 @@ var Menu_order = ['Top','About','News','Member','Contact'];
 
 $(function(){
     $('#header').load('./header.html', function(){header_rewrite();});//ヘッダーの配置
-
+    $('#oh_no').get(0).load();
     function header_rewrite (){
         if($('#header').attr('name') == 'otherheader'){
             $('.nav_list li').eq(Menu_order.indexOf('About')).find('a').attr('href','./#about');
