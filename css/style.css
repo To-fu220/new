@@ -49,7 +49,6 @@ body{
 
 /* DSSロゴ */
 #logo_url{
-    display: flex;
 }
 #logo{
     display: block;
