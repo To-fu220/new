@@ -122,12 +122,13 @@ body{
     margin: auto 0;
     height: 85%;
     padding: 0;
-    display: block;
+    display: inline-flex;
 }
 #wrap-access li{
     position: relative;
     display: inline;
     height: 100%;
+    margin-left: 1em;
 }
 #wrap-access li img{
     position: relative;
