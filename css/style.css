@@ -48,13 +48,10 @@ body{
 }
 
 /* DSSロゴ */
-#logo_url{
-    width: auto;
-}
 #logo{
     width: auto;
     height: 100%;
-    display: block;
+    display: inline;
     position: relative;
     left: 3%;
 }
