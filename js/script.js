@@ -12,10 +12,14 @@ $(function(){
         }
     }
     $(".selector").change(function () {
-        $(this).removeClass('unselected');
+        if ($(this).hasClass('unselected')){
+            $(this).removeClass('unselected');
+            $(this).find('option').eq(0).prop('disabled',true);
+            $(this).find('option').eq(0).css({'display':'none'});
+        }    
+
         //綾瀬はるか様強制入力
         if ($(this).find('select').val() == '綾瀬はるか様からのお問い合わせ') {
-            console.log($(this).find('select').val());
             $('input[name=name]').val('綾瀬はるか');
             $('input[name=name]').prop('disabled', true);
         }else{
