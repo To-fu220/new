@@ -49,15 +49,14 @@ body{
 
 /* DSSロゴ */
 #logo_url{
-    min-width: 100%;
-    display: inline-block;
     position: relative;
+    display: inline;
+    height: 100%;
 }
 #logo{
     height: 100%;
     display: block;
     position: relative;
-    left: 3%;
 }
 /* メニュー */
 .nav_list{
