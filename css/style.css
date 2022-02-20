@@ -49,8 +49,9 @@ body{
 
 /* DSSロゴ */
 #logo{
-    width: fit-content;
+    width: auto;
     height: 100%;
+    display: flex;
     position: relative;
     left: 3%;
 }
