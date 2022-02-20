@@ -51,7 +51,7 @@ body{
 #logo{
     width: auto;
     height: 100%;
-    display: inline-flex;
+    display: block;
     position: relative;
     left: 3%;
 }
