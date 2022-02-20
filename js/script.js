@@ -12,11 +12,12 @@ $(function(){
         }
     }
     $(".selector").change(function () {
-        if ($(this).hasClass('unselected')){
-            $(this).removeClass('unselected');
-            $(this).find('option').eq(0).remove();
-        }    
-
+        if ($('.unselected').length){
+            $('.unselected').removeClass('unselected');
+            $(this).find('option').eq(0).prop('disabled',true);
+            $(this).find('option').eq(0).css({'display':'none'});
+        }
+        console.log($(this).find('select').val());
         //綾瀬はるか様強制入力
         if ($(this).find('select').val() == '綾瀬はるか様からのお問い合わせ') {
             $('input[name=name]').val('綾瀬はるか');
@@ -28,9 +29,6 @@ $(function(){
         //不適切動画 oh no!
         if ($(this).find('select').val() == '不適切と思しき動画') {
             $('#oh_no').get(0).play();
-        }else{
-            $('input[name=name]').val('');
-            $('input[name=name]').prop('disabled', false);
         }
     });
 });

@@ -214,16 +214,11 @@ body{
 .selector{
     position: relative;
 }
-.unselected::before{
-    content: "選択してください";
-    pointer-events: none;
+.unselected{
     color: #757575;
-    position: absolute;
-    font-family: Arial;
-    height: 3em;
-    display: flex;
-    align-items: center;
-    padding: 0 1em 0 1em;
+}
+.unselected option:nth-child(n+2){
+    color: #000000;
 }
 .selector::after{
     content: "";
