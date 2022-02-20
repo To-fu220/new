@@ -14,8 +14,7 @@ $(function(){
     $(".selector").change(function () {
         if ($(this).hasClass('unselected')){
             $(this).removeClass('unselected');
-            $(this).find('option').eq(0).prop('disabled',true);
-            $(this).find('option').eq(0).css({'display':'none'});
+            $(this).find('option').eq(0).remove();
         }    
 
         //綾瀬はるか様強制入力
