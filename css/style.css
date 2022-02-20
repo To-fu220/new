@@ -48,6 +48,9 @@ body{
 }
 
 /* DSSロゴ */
+#log_url{
+    width: auto;
+}
 #logo{
     width: auto;
     height: 100%;
