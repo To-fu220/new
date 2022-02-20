@@ -50,6 +50,7 @@ body{
 /* DSSロゴ */
 #logo_url{
     width: auto;
+    display: inline-block;
     position: relative;
 }
 #logo{
