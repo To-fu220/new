@@ -49,8 +49,10 @@ body{
 
 /* DSSロゴ */
 #logo_url{
+    position: relative;
 }
 #logo{
+    height: 100%;
     display: block;
     position: relative;
     left: 3%;
