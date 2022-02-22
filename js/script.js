@@ -7,7 +7,7 @@ $(function(){
         if($('#header').attr('name') == 'otherheader'){
             $('.nav_list li').eq(Menu_order.indexOf('About')).find('a').attr('href','./#about');
             $('.nav_list li').eq(Menu_order.indexOf('News')).find('a').attr('href','./#mininews');
-            $('.nav_list li').eq(Menu_order.indexOf('Member')).find('a').attr('href','./#member');
+            $('.nav_list li').eq(Menu_order.indexOf('Member')).find('a').attr('href','member.html');
         }
     }
     $(".selector").change(function () {
