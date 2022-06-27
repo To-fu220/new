@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
+        <style>.required::after{content: " *"; color: red;}</style>
     </head>
     <body>
         <!-- SE -->
@@ -29,10 +30,10 @@
             </p>
             <form method="post">
                 <div class="form-group">
-                    <label>お問い合わせ種別</label>
+                    <label class="required">お問い合わせ種別</label>
                     <div class="selector">
-                        <select name="type" class="unselected">
-                            <option hidden>選択してください</option>
+                        <select name="type" class="unselected" required>
+                            <option value="" selected hidden disabled>選択してください</option>
                             <option value="取材・出演">取材・出演</option>
                             <option value="著作物">著作物</option>
                             <option value="綾瀬はるか様からのお問い合わせ">綾瀬はるか様からのお問い合わせ</option>
@@ -43,20 +44,20 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>お名前</label>
-                    <input type="text" name="name" maxlength="30" placeholder="暗黒　科学">
+                    <label class="required">お名前</label>
+                    <input type="text" name="name" maxlength="30" placeholder="暗黒　科学" required>
                 </div>
                 <div class="form-group">
                     <label>企業・団体名</label>
                     <input type="text" name="Group" maxlength="30" placeholder="暗黒面科学株式会社">
                 </div>
                 <div class="form-group">
-                    <label>メールアドレス</label>
-                    <input type="text" name="e-mail" maxlength="254" placeholder="XXX@example.com">
+                    <label class="required">メールアドレス</label>
+                    <input type="text" name="e-mail" maxlength="254" placeholder="XXX@example.com" required>
                 </div>
                 <div class="form-group">
-                    <label style="margin: 1em 0 0 0;">お問い合わせ内容</label>
-                    <textarea name="content" rows="5" placeholder="お問い合わせ内容をご記入ください"></textarea>
+                    <label style="margin: 1em 0 0 0;" class="required">お問い合わせ内容</label>
+                    <textarea name="content" rows="5" placeholder="お問い合わせ内容をご記入ください" required></textarea>
                 </div>
                 <div class="form-group">
                     <label></label>
