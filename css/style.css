@@ -162,6 +162,19 @@ body{
     margin: 0 auto;
     max-width: 80%;
 }
+#mininews h2{
+    border-bottom: 5px var(--color2) dashed;
+}
+/*Newsitems*/
+#newsitems{
+
+}
+/*Works*/
+#works{
+    margin: 0 auto;
+    max-width: 80%;
+}
+
 /*Member*/
 #member{
     margin: 0 auto;
