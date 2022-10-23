@@ -2,7 +2,8 @@
 var Menu_order = ['Top','About','News','Member','Contact'];
 
 $(function(){
-    $('#header').load('./header.html', function(){header_rewrite();});//ヘッダーの配置
+    $('#header').load('./component/header.html', function(){header_rewrite();});//ヘッダーの配置
+    $('#footer').load('./component/footer.html');//フッター＋なんちゃってクッキーの配置
     function header_rewrite (){
         if($('#header').attr('name') == 'otherheader'){
             $('.nav_list li').eq(Menu_order.indexOf('About')).find('a').attr('href','./#about');
@@ -28,6 +29,12 @@ $(function(){
         if ($(this).find('select').val() == '不適切と思しき動画') {
             $('#oh_no').get(0).play();
         }
+    });
+    $('#wannabe-cookie').on('click', function () {
+        var element = $('#cookie-permission');
+        element.fadeOut(200, function(){
+            element.remove();
+        });
     });
 });
 $(window).on('load', function() {

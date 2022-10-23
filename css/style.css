@@ -180,6 +180,29 @@ body{
     margin: 0 auto;
     max-width: 80%;
 }
+#wrap-member{
+    margin: 0px 20px 0px 20px;
+    padding: 0px;
+    font-size:15px;
+ }
+.member-name{
+    line-height: 2em;
+}
+.Introduction{
+    display: flex;
+    padding: 0.5em;
+    padding-top: 1em;
+    border-top: blue;
+    border-top-style: solid;
+}
+.Introduction div{
+    margin-left: 1em;
+    display: flex;
+    flex-flow: column;
+}
+.Introduction img{
+    height: 12em;
+}
 
 /* 問い合わせ */
 #wrap-contact{
@@ -272,4 +295,42 @@ body{
     color: var(--color1);
     font-size: small;
     font-family: var(--font);
+}
+/*cookie-permission*/
+#cookie-permission{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(216, 216, 220, 0.95);
+}
+#cookie-permission div{
+    margin: 2.5em 0;
+    display: flex;
+    justify-content: space-evenly
+}
+#cookie-permission button{
+    margin: auto 0;
+    padding: 1em 3em;
+    border-radius: 2em;
+    border: none;
+    background: #272727;
+    color: white;
+    cursor: pointer;
+    cursor: hand;
+    transition: ease-in-out 0.2s;
+}
+#cookie-permission button:hover{
+    background: #4e4e4e;
+    transition: ease-in-out 0.2s;
+}
+#cookie-permission button:active{
+    background: #353535;
+    color: #6e6e6e;
+    transition: ease-in-out 0.1s;
+}
+#cookie-permission p{
+    text-align: left;
+}
+#cookie-permission a{
+    color: blue;
 }
