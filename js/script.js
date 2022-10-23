@@ -30,7 +30,8 @@ $(function(){
             $('#oh_no').get(0).play();
         }
     });
-    $('#wannabe-cookie').on('click', function () {
+    //なんちゃってcookie
+    $(document).on('click', '#wannabe-cookie', function () {
         var element = $('#cookie-permission');
         element.fadeOut(200, function(){
             element.remove();
