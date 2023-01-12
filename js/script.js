@@ -25,10 +25,6 @@ $(function(){
             $('input[name=name]').val('');
             $('input[name=name]').prop('disabled', false);
         }
-        //不適切動画 oh no!
-        if ($(this).find('select').val() == '不適切と思しき動画') {
-            $('#oh_no').get(0).play();
-        }
     });
     //なんちゃってcookie
     $(document).on('click', '#wannabe-cookie', function () {
