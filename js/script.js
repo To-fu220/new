@@ -1,16 +1,4 @@
-
-var Menu_order = ['Top','About','News','Member','Contact'];
-
 $(function(){
-    $('#header').load('./component/header.html', function(){header_rewrite();});//ヘッダーの配置
-    $('#footer').load('./component/footer.html');//フッター＋なんちゃってクッキーの配置
-    function header_rewrite (){
-        if($('#header').attr('name') == 'otherheader'){
-            $('.nav_list li').eq(Menu_order.indexOf('About')).find('a').attr('href','./#about');
-            $('.nav_list li').eq(Menu_order.indexOf('News')).find('a').attr('href','./#mininews');
-            $('.nav_list li').eq(Menu_order.indexOf('Member')).find('a').attr('href','member.html');
-        }
-    }
     $(".selector").change(function () {
         if ($('.unselected').length){
             $('.unselected').removeClass('unselected');

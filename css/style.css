@@ -44,6 +44,7 @@ h2{
     display: flex;
     justify-content: space-around;
     z-index: 50;
+    box-shadow: 0 0 10px 8px var(--color2);
 }
 
 /* DSSロゴ */
@@ -192,9 +193,11 @@ h2{
     margin: 0;
 }
 #newsitems dt{
+    margin-top: 0.7em;
 }
 #newsitems dd{
-    margin: 0;
+    display: contents;
+    margin: 0 0 0 0;
     float: right;
     color:#a09999;
 }
@@ -205,6 +208,7 @@ h2{
     width: 100%;
     border: 2px solid var(--color2);
     border-radius: 1em;
+    box-shadow: 0.5em 0.5em 5px #8d8d8d;
 }
 /*Works*/
 #works{
