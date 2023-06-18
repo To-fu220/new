@@ -6,6 +6,14 @@
     --color3: #dfdcdb;
     --font: 'DotGothic16', sans-serif;
 }
+/* スクロールバーの非表示 */
+html{
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+html::-webkit-scrollbar{
+    display: none;
+}
 
 /* m(^ω^)m */
 #loading{
@@ -29,6 +37,7 @@ body{
     color: var(--color2);
     background: var(--color1);
     font-family: var(--font);
+    overflow-x: hidden;
 }
 h2{
     font-size: 2.3em;
@@ -87,33 +96,24 @@ h2{
     text-decoration: none;
     font-size: large;
     letter-spacing: 0.25em;
+    transition: 0.15s;
 }
 .nav_item a::before{
     content: "";
     position: absolute;
     display: inline-block;
-    width: 0px;
-    height: 10%;
+    width: 95%;
+    height: 0;
     background: gray;
-    top: 75%;
+    top: 80%;
     z-index: -1;
+    transition: 0.15s;
+}
+.nav_item a:hover{
+    opacity: 70%;
 }
 .nav_item a:hover::before{
-    animation: 2s ease-in-out 0s infinite normal forwards running nav_item_befor_hover;
-}
-@keyframes nav_item_befor_hover{
-    0%{
-        width: 0%;
-        left: 0;
-    }
-    50%{
-        width: 100%;
-        left: 0;
-    }
-    100%{
-        width: 0%;
-        left: 100%;
-    }
+    height: 5%;
 }
 /* アクセスメニュー */
 #wrap-access{
@@ -145,16 +145,41 @@ h2{
 
 /*メイン*/
 #wrap-content{
-    margin-top: 5%;
+    margin-top: 6em;
 }
 #pagetitle{
-    margin: 5%;
+    margin: 5% 10%;
     margin-bottom: 1%;
     font-size: 70px;
     max-width: 80%;
 }
 #signbord{
-    padding-top: 10%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: calc(720 * (100vw / 1920));
+    width: calc((1240 + 20) * 3 * (100vw / 1920));
+    margin: 40px 0;
+    padding-bottom: 100px;
+    transform: translateX(calc((-1240px - 1240px / 2 - 20px * 1.5) + 100vw / 2));
+}
+#signbord .sign-slide{
+    height: 100%;
+    margin: auto 0;
+    width: calc((1240 * (100vw / 1920)));
+}
+#signbord .sign-slide div{
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+    border-radius: 1em;
+    box-shadow: 0 0 20px 5px gray;
+}
+#signbord div img{
+    vertical-align: bottom;
+    height: 100%;
+    width: 100%;
 }
 /*About*/
 #about{
